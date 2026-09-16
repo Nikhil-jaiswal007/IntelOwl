@@ -90,7 +90,8 @@ def analyze():
                 "module_loads": module_loads,
                 "entry_point_hit": entry_hit["value"],
                 "exit_status": None,
-                "error": str(e),
+                "error": "Emulation failed due to an internal error",
+                "error_type": type(e).__name__,
             }
         ), 200
     finally:
